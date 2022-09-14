@@ -41,7 +41,7 @@ public class FactoriaJuegos {
 		j.setJpVentas(Double.parseDouble(jpVentas));
 		j.setOtherVentas(Double.parseDouble(otherVentas));
 		j.setGlobalVentas(Double.parseDouble(globalVentas));
-		return new Juego();
+		return j;
 	}
 
 	/**

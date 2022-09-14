@@ -2,16 +2,16 @@ package utilidades;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * implementación Scanner.
  * 
- * @author Lamia,
+ * @author Grupo 2
  * @version 1.0: 14/09/2022
  */
-
-
 
 public class LeerDatos {
 	private static final Logger logger = LogManager.getLogger("Nombre_Clase");
@@ -24,53 +24,70 @@ public class LeerDatos {
 	@SuppressWarnings("resource")
 	public static String recogerString(String mensaje) {
 		Scanner teclado = new Scanner(System.in);
-		logger.info("Hola, estoy en recoger string");
-		return teclado.nextLine();
+		try {
 
+			return teclado.nextLine();
+		} catch (InputMismatchException e) {
+			logger.info("Este dato introducido no es correcto");
+		}
+		return teclado.nextLine();
 	}
-	
+
 	/**
 	 * Método que lee por teclado y devuelve un string
+	 * 
 	 * @param String devuelve mensaje
 	 * @return String
-	 * @author lamia
-	 * @version 1.0
 	 * 
-	 * */
+	 */
+
 	public static String recogerString1(String mensaje) {
-		System.out.println(mensaje);
+		try {
+			System.out.println(mensaje);
+			return recogerString1(mensaje);
+		} catch (InputMismatchException e) {
+			logger.info("Este dato introducido no es correcto");
+		}
 		return recogerString1(mensaje);
 	}
 
 	@SuppressWarnings("resource")
 	public static int recogerInt() {
+		Scanner teclado = new Scanner(System.in);
+		try {
 
-		return new Scanner(System.in).nextInt();
+			return teclado.nextInt();
+		} catch (InputMismatchException e) {
+			logger.info("Este dato introducido no es correcto");
+		}
+		return teclado.nextInt();
 	}
 
 	/**
 	 * Método registrar entrada datos
+	 * 
 	 * @param String devuelve int
 	 * @return int
-	 * @author lamia
-	 * @version 1.0
 	 * 
 	 */
-	  
-	 
 
 	public static int recogerInt(String mensaje) {
-		System.out.println(mensaje);
-		return recogerInt();
+		try {
+			System.out.println(mensaje);
+			return recogerInt(mensaje);
+		} catch (InputMismatchException e) {
+			logger.info("Este dato introducido no es correcto");
+		}
+		return recogerInt(mensaje);
 	}
+
 	/**
 	 * Método que lee por teclado y devuelve un string
+	 * 
 	 * @param String devuelve mensaje
 	 * @return String
-	 * @author lamia
-	 * @version 1.0
 	 * 
-	 * */
+	 */
 
 	/**
 	 * En este método el objetivo es registrar la entradas de datos por parte del
@@ -79,12 +96,24 @@ public class LeerDatos {
 
 	@SuppressWarnings("resource")
 	public static float recogerFloat() {
-		return new Scanner(System.in).nextFloat();
+		Scanner teclado = new Scanner(System.in);
+		try {
+
+			return teclado.nextFloat();
+		} catch (InputMismatchException e) {
+			logger.info("Este dato introducido no es correcto");
+		}
+		return teclado.nextFloat();
 	}
 
-	public static float recogerFloat(String msg) {
-		System.out.println(msg);
-		return recogerFloat();
+	public static float recogerFloat(String mensaje) {
+		try {
+			System.out.println(mensaje);
+			return recogerFloat(mensaje);
+		} catch (InputMismatchException e) {
+			logger.info("Este dato introducido no es correcto");
+		}
+		return recogerFloat(mensaje);
 	}
 
 }
