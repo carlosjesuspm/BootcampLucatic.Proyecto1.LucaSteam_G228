@@ -1,5 +1,8 @@
 package utilidades;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -48,4 +51,57 @@ public class Fichero {
 
 	}
 
+	/**
+	 * Método que escribe un objeto juego en un fichero CSV
+	 * 
+	 * @param Juego - Objeto de tipo juego.
+	 * @author Álvaro Román
+	 * @version 1.0
+	 */	
+	public static void escribirCsv(Juego juego) {
+		
+		try (FileWriter file = new FileWriter("vgsales.csv");
+			BufferedWriter writer = new BufferedWriter(file);)
+		{
+
+			writer.write(juego.getRango()+","+juego.getNombre()+","+juego.getPlataforma().getPlataforma()+","+juego.getYear()+","+
+					juego.getGenero()+","+juego.getEditor()+","+juego.getNA_ventas()+","+juego.getEU_ventas()+","+juego.getJP_ventas()+","+
+					juego.getOther_ventas()+","+juego.getGlobal_ventas());
+			
+		} catch (IOException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			logger.warn("Problema al escribir el fichero. Método escribirCsv()");
+		
+		}
+	}
+	
+	/**
+	 * Método que escribe un objeto juego en un fichero CSV
+	 * 
+	 * @param Juego - Objeto de tipo juego.
+	 * @author Álvaro Román
+	 * @version 1.0
+	 */	
+	public static void escribirCsv(ArrayList<Juego> juegos) {
+		
+		for (Juego juego : juegos) {
+			escribirCsv(juego);
+		}
+		
+	}
+	
 }
+		
+		
+		
+
+		
+	
+	
+	
+	
+		
+		
+		
+	
