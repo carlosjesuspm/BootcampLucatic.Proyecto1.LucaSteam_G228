@@ -2,11 +2,17 @@ package model;
 
 import java.time.LocalDate;
 
+import utilidades.LeerDatos;
+
 public class FactoriaJuegos {
 
 	/**
 	 * 
 	 * Metodo para crear un objeto {@link Juego} con los argumentos pasados
+	 * 
+	 * @author Grupo 2
+	 * @version 1.0 14/09/22
+	 * 
 	 * 
 	 * @param rango        Rango del juego en String
 	 * @param nombre       Nombre del juego en String
@@ -33,7 +39,7 @@ public class FactoriaJuegos {
 		j.setRango(Integer.parseInt(rango));
 		j.setNombre(nombre);
 		j.setPlataforma(stringToPlataforma(plataforma));
-		j.setYear(LocalDate.of(Integer.parseInt(year), 0, 0));
+		j.setYear(year);
 		j.setGenero(stringToGenero(genero));
 		j.setEditor(editor);
 		j.setNaVentas(Double.parseDouble(naVentas));
@@ -43,6 +49,22 @@ public class FactoriaJuegos {
 		j.setGlobalVentas(Double.parseDouble(globalVentas));
 		return j;
 	}
+	
+	public static Juego crearJuego() {
+		Juego j = new Juego();
+		j.setRango(LeerDatos.recogerInt("Introduce rango juego: "));
+		j.setNombre(LeerDatos.recogerString("Introduce nombre juego: "));
+		j.setPlataforma(stringToPlataforma(LeerDatos.recogerString("Introduce nombre de la plataforma: ")));
+		j.setYear(LeerDatos.recogerString("Introduce año del juego: "));
+		j.setGenero(stringToGenero(LeerDatos.recogerString("Introduce género del juego: ")));
+		j.setEditor(LeerDatos.recogerString("Introduce nombre editor: "));
+		return j;
+	};
+	
+	
+	
+	
+	
 
 	/**
 	 * Metodo privado que transforma el valor de la {@link Plataforma} de String a

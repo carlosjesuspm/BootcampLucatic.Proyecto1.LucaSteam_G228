@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import datos.DatosJuegos;
 import datos.IDatosJuegos;
 import lombok.Data;
+import model.Juego;
 
 /**
  * Clase que contiene los métodos para conectar las peticiones de la capa
@@ -39,5 +40,15 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		d.importarDatos();
 
 	}
+	
+	public void altaJuego(Juego juego) {};
+	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
+	public void mostrarListaJuegos(){};
+	public void listadoConsolaNintendo(){};
+	public void listadoEditores(String nombreEditor){};
+	public void filtrarSigloXX(){};
+	public void modificarJuego(int rango){};
+	public void eliminarJuego(int rango){};
+	public void filtrarAnnoPar(){};
 
 }

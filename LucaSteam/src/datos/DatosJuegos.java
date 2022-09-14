@@ -36,7 +36,15 @@ public class DatosJuegos implements IDatosJuegos{
 	public void importarDatos() {
 		listaJuegos = Fichero.leerCsv("vgsales.csv", true);
 	}
-	
+	public void altaJuego(Juego juego) {};
+	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
+	public void mostrarListaJuegos(){};
+	public void listadoConsolaNintendo(){};
+	public void listadoEditores(String nombreEditor){};
+	public void filtrarSigloXX(){};
+	public void modificarJuego(int rango){};
+	public void eliminarJuego(int rango){};
+	public void filtrarAnnoPar(){};
 	
 
 }
