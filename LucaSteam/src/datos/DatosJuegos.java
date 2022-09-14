@@ -1,7 +1,6 @@
 package datos;
 
 import java.util.ArrayList;
-
 import lombok.Data;
 import model.Juego;
 
@@ -13,7 +12,7 @@ import model.Juego;
  * @date 14/09
  */
 @Data
-public class DatosJuegos {
+public class DatosJuegos implements IDatosJuegos{
 	
 	private ArrayList<Juego> listaJuegos;
 	
@@ -24,12 +23,11 @@ public class DatosJuegos {
 	 * @version 1
 	 * @date 14/09
 	 */
-//	@Override 
-//	public void importarDatos() {
-//		listaJuegos = Fichero.leerDatos();
-//		
-//	}
-//	
+	@Override
+	public void importarDatos() {
+	
+	}
+	
 	
 
 }
