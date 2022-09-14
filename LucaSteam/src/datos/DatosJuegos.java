@@ -33,7 +33,7 @@ public class DatosJuegos implements IDatosJuegos {
 	 */
 	@Override
 	public void importarDatos() {
-		listaJuegos = Fichero.leerCsv();
+		listaJuegos = Fichero.leerCsv("vgsales.csv", true);
 	}
 
 	/**
