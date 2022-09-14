@@ -35,9 +35,19 @@ public class ServiciosJuegos implements IServiciosJuegos {
 
 	@Override
 	public void importarDatos() {
-		// TODO Auto-generated method stub
 		d.importarDatos();
 
+	}
+
+	/**
+	 * Metodo que muestra los juegos de los datos con {@link DatosJuegos#mostrarJuegos()}
+	 * 
+	 * @author Grupo2
+	 * @version 1.0
+	 */
+	@Override
+	public void mostrarJuegos() {
+		d.mostrarJuegos();
 	}
 
 }

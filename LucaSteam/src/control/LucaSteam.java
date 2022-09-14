@@ -1,5 +1,12 @@
 package control;
 
+import java.util.InputMismatchException;
+
+import gui.Menu;
+import servicios.IServiciosJuegos;
+import servicios.ServiciosJuegos;
+import utilidades.LeerDatos;
+
 /**
  * Control de la aplicacion siendo el comienzo el metodo {@link #start()}
  * 
@@ -7,7 +14,8 @@ package control;
  *
  */
 public class LucaSteam {
-	// ServiciosJuegos
+	
+	private ServiciosJuegos s = new ServiciosJuegos();
 
 	/**
 	 * Metodo para inicio de LucaSteam
@@ -15,11 +23,22 @@ public class LucaSteam {
 	 * @author Grupo 2
 	 * @version 1.0: 14-09-2022
 	 */
-	public static void start() {
-		// ServiciosJuegos.importarDatos();
-//		boolean salir = false;
-//		do {
-//			// mostrar menu
-//		} while(!salir);
+	public void start() {
+		s.importarDatos();
+		do {
+			Menu.mostrarMenu();
+		} while(pedirOpcion());
+	}
+
+	
+	// tratar en servicios por logica de empresa TODO
+	private boolean pedirOpcion() {
+		try {
+			String s = LeerDatos.recogerString("Introduce una opcion");
+			if (s == "0") return false;
+		} catch (InputMismatchException e) {
+			
+		}
+		return true;
 	}
 }
