@@ -24,7 +24,7 @@ public class LeerDatos {
 	 */
 
 	@SuppressWarnings("resource")
-	public static String recogerString(String mensaje) {
+	public static String recogerString() {
 		Scanner teclado = new Scanner(System.in);
 		try {
 			
