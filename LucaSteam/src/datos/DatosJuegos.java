@@ -3,6 +3,7 @@ package datos;
 import java.util.ArrayList;
 import lombok.Data;
 import model.Juego;
+import utilidades.Fichero;
 
 /**
  * Clase DatosJuegos: gestiona los datos de la aplicacion.
@@ -14,7 +15,7 @@ import model.Juego;
 @Data
 public class DatosJuegos implements IDatosJuegos{
 	
-	private ArrayList<Juego> listaJuegos;
+	private ArrayList<Juego> listaJuegos = new ArrayList<Juego>();
 	
 	/**
 	 * Metodo importarDatos(): recoge los datos del CSV.
@@ -25,7 +26,7 @@ public class DatosJuegos implements IDatosJuegos{
 	 */
 	@Override
 	public void importarDatos() {
-	
+		listaJuegos = Fichero.leerCsv();
 	}
 	
 	
