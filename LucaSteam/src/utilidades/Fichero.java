@@ -1,5 +1,6 @@
 package utilidades;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 
+import model.FactoriaJuegos;
 import model.Juego;
 import org.apache.logging.log4j.Logger;
 
@@ -18,33 +20,41 @@ import org.apache.logging.log4j.Logger;
  */
 
 public class Fichero {
-	private static final Logger logger = LogManager.getLogger("Nombre_Clase");
+	private static final Logger logger = LogManager.getLogger("Fichero");
 
 	/**
 	 * Descripción del método: Metodo que convierte Csv en ArrayList.
 	 * 
-	 * @param 0
-	 * @return ArrayList<Juego>
+	 * @param ruta La ruta del archivo csv que se quiere leer
+	 * @param tieneCabecera {@code true} tiene cabecera, de otra manera no tiene
+	 * @return ArrayList<Juego> que contiene los juegos introducidos
 	 * @author Lamia
-	 * @version 1.0
+	 * @version 2.0
 	 */
-	public static ArrayList<Juego> leerCsv() {
-		/*
-		 * Tener en cuenta si la primera linea del CSV es cabecera o contenido.
-		 * Posibilidad pasar booleano indicando cabecera, si hay cabecera en lineas
-		 * quitar la linea 0.
-		 */
+	public static ArrayList<Juego> leerCsv(String ruta, boolean tieneCabecera) {
+		ArrayList<Juego> juegos = new ArrayList<>();
 		try {
-			List<String> lineas = Files.readAllLines(Paths.get("vgsales.csv"));
+			List<String> lineas = Files.readAllLines(Paths.get(ruta));
+			// eliminamos la primera linea si es que el fichero tiene cabecera
+			if (tieneCabecera)
+				lineas.remove(0);
 			for (String string : lineas) {
-				String[] palabras = string.split(",");
-
+				try {
+					String[] palabras = string.split(",");
+					juegos.add(FactoriaJuegos.crearJuego(palabras[0], palabras[1], palabras[2], palabras[3], palabras[4],
+							palabras[5], palabras[6], palabras[7], palabras[8], palabras[9], palabras[10]));
+				} catch (NumberFormatException e) {
+					logger.warn(e.getMessage() + " en " + string);
+				} catch (IllegalArgumentException e) {
+					logger.warn(e.getMessage() + " en " + string);
+				}
 			}
-			System.out.println(lineas.size());
+		} catch (IOException e) {
+			logger.warn(e.getMessage());
 		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
+			logger.warn(e.getMessage());
+		} 
+		return juegos;
 
 	}
 
