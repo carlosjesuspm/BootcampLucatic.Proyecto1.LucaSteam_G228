@@ -22,14 +22,17 @@ public class LeerDatos {
 	 */
 
 	@SuppressWarnings("resource")
-	public static String recogerString(String mensaje) {
+	public static String recogerString(String mensaje) throws InputMismatchException {
 		Scanner teclado = new Scanner(System.in);
-		try {
-
-			return teclado.nextLine();
-		} catch (InputMismatchException e) {
-			logger.info("Este dato introducido no es correcto");
-		}
+//		try {
+//			System.out.println(mensaje);
+//			return teclado.nextLine();
+//		} catch (InputMismatchException e) {
+//			logger.info("Este dato introducido no es correcto");
+//		}
+//		return teclado.nextLine();
+		
+		System.out.println(mensaje);
 		return teclado.nextLine();
 	}
 
@@ -44,7 +47,7 @@ public class LeerDatos {
 	public static String recogerString1(String mensaje) {
 		try {
 			System.out.println(mensaje);
-			return recogerString1(mensaje);
+			
 		} catch (InputMismatchException e) {
 			logger.info("Este dato introducido no es correcto");
 		}

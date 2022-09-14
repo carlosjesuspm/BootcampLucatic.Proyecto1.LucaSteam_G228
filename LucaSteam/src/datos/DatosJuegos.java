@@ -36,6 +36,20 @@ public class DatosJuegos implements IDatosJuegos{
 	public void importarDatos() {
 		listaJuegos = Fichero.leerCsv("vgsales.csv", true);
 	}
+
+	/**
+	 * Metodo para mostrar una lista de todos los juegos
+	 * 
+	 * @author Grupo2 - Alonso
+	 * @version 1.0
+	 * @date 14/09
+	 */
+	@Override
+	public void mostrarJuegos() {
+		for (Juego juego : listaJuegos) {
+			System.out.println(juego.toString());
+		}
+	}
 	
 	
 
