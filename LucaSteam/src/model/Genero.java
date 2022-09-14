@@ -1,10 +1,14 @@
 package model;
 
+/**
+ * @author Alonso Gomez Casanova
+ * @version 1.0
+ */
 public enum Genero {
 
-	Action("Accion"), Adventure("Adventura"), Fighting("Lucha"), Misc("Mistico"), Platform("Plataforma"),
-	Puzzle("Puzzle"), Racing("Carreras"), RolePlaying("Juegos de rol"), Shooter("Disparos"), Simulation("Simulacion"),
-	Sports("Deportes"), Strategy("Estrategia");
+	Action("Action"), Adventure("Adventure"), Fighting("Fighting"), Misc("Misc"), Platform("Platform"),
+	Puzzle("Puzzle"), Racing("Racing"), RolePlaying("RolePlaying"), Shooter("Shooter"), Simulation("Simulation"),
+	Sports("Sports"), Strategy("Strategy");
 
 	private String genero;
 
