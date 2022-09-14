@@ -74,8 +74,8 @@ public class Fichero {
 		{
 
 			writer.write(juego.getRango()+","+juego.getNombre()+","+juego.getPlataforma().getPlataforma()+","+juego.getYear()+","+
-					juego.getGenero()+","+juego.getEditor()+","+juego.getNA_ventas()+","+juego.getEU_ventas()+","+juego.getJP_ventas()+","+
-					juego.getOther_ventas()+","+juego.getGlobal_ventas());
+					juego.getGenero()+","+juego.getEditor()+","+juego.getNaVentas()+","+juego.getEuVentas()+","+juego.getJpVentas()+","+
+					juego.getOtherVentas()+","+juego.getGlobalVentas());
 
 		} catch (IOException e) {
 			// TODO: handle exception
