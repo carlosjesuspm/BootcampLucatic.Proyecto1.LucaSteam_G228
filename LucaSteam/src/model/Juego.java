@@ -24,10 +24,10 @@ public class Juego {
 	private LocalDate year;
 	private Genero genero;
 	private String editor;
-	private int NA_ventas;
-	private int EU_ventas;
-	private int JP_ventas;
-	private int Other_ventas;
-	private int Global_ventas;
+	private double naVentas;
+	private double euVentas;
+	private double jpVentas;
+	private double otherVentas;
+	private double globalVentas;
 	
 }
