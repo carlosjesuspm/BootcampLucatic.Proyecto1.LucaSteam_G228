@@ -1,7 +1,7 @@
 package model;
 
 /**
- * @author Alonso Gomez Casanova
+ * @author Grupo 2
  * @version 1.0
  */
 public enum Genero {
