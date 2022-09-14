@@ -30,7 +30,7 @@ public class Fichero {
 	 * @param ruta La ruta del archivo csv que se quiere leer
 	 * @param tieneCabecera {@code true} tiene cabecera, de otra manera no tiene
 	 * @return ArrayList<Juego> que contiene los juegos introducidos
-	 * @author Lamia
+	 * @author Grupo 2
 	 * @version 2.0
 	 */
 	public static ArrayList<Juego> leerCsv(String ruta, boolean tieneCabecera) {
@@ -64,7 +64,7 @@ public class Fichero {
 	 * Método que escribe un objeto juego en un fichero CSV
 	 *
 	 * @param Juego - Objeto de tipo juego.
-	 * @author Álvaro Román
+	 * @author Grupo 2
 	 * @version 1.0
 	 */
 	public static void escribirCsv(Juego juego) {
