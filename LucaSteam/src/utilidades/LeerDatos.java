@@ -1,7 +1,6 @@
 package utilidades;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
