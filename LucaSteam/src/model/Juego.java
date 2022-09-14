@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
  * Clase entidad dedicada a crear objetos de tipo Juego <br>
  * Contenido de la clase creado con Lombok (getters, setters, equals, hashCode, toString) 
  * 
- * @author Alonso Gomez Casanova
+ * @author Grupo 2
  * @version 1.0: 14/09/2022
  */
 @Data
