@@ -4,6 +4,7 @@ package utilidades;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.logging.LogManager;
 
 /**
  * implementación Scanner.
@@ -59,11 +60,6 @@ public class LeerDatos {
 		return teclado.nextInt();
 	}
 
-
-	public static String recogerString(String mensaje) throws InputMismatchException{
-			System.out.println(mensaje);
-			return recogerString();
-	}
 
 	
 	/**

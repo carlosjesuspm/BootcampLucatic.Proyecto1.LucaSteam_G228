@@ -67,9 +67,9 @@ public class Fichero {
 	 * @author Grupo 2
 	 * @version 1.0
 	 */
-	public static void escribirCsv(Juego juego) {
+	public static void escribirCsv(Juego juego, String ruta_fichero) {
 
-		try (FileWriter file = new FileWriter("vgsales.csv");
+		try (FileWriter file = new FileWriter(ruta_fichero);
 			BufferedWriter writer = new BufferedWriter(file);)
 		{
 
@@ -92,10 +92,10 @@ public class Fichero {
 	 * @author Álvaro Román
 	 * @version 1.0
 	 */
-	public static void escribirCsv(ArrayList<Juego> juegos) {
+	public static void escribirCsv(ArrayList<Juego> juegos, String ruta_fichero) {
 
 		for (Juego juego : juegos) {
-			escribirCsv(juego);
+			escribirCsv(juego, ruta_fichero);
 		}
 
 	}
