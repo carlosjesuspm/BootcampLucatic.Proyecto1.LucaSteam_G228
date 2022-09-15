@@ -53,7 +53,6 @@ public class DatosJuegos implements IDatosJuegos{
 	
 	public void altaJuego(Juego juego) {};
 	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
-	public void mostrarListaJuegos(){};
 	public void listadoConsolaNintendo(){};
 	public void listadoEditores(String nombreEditor){};
 	public void filtrarSigloXX(){};

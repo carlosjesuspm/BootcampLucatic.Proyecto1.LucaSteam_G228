@@ -40,16 +40,6 @@ public class ServiciosJuegos implements IServiciosJuegos {
 
 	}
 	
-	public void altaJuego(Juego juego) {};
-	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
-	public void mostrarListaJuegos(){};
-	public void listadoConsolaNintendo(){};
-	public void listadoEditores(String nombreEditor){};
-	public void filtrarSigloXX(){};
-	public void modificarJuego(int rango){};
-	public void eliminarJuego(int rango){};
-	public void filtrarAnnoPar(){};
-
 	/**
 	 * Metodo que muestra los juegos de los datos con {@link DatosJuegos#mostrarJuegos()}
 	 * 
@@ -61,4 +51,15 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		d.mostrarJuegos();
 	}
 
+	
+	public void altaJuego(Juego juego) {};
+	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
+	public void listadoConsolaNintendo(){};
+	public void listadoEditores(String nombreEditor){};
+	public void filtrarSigloXX(){};
+	public void modificarJuego(int rango){};
+	public void eliminarJuego(int rango){};
+	public void filtrarAnnoPar(){};
+
+	
 }
