@@ -1,6 +1,6 @@
 package model;
 
-import java.time.LocalDate;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +21,7 @@ public class Juego {
 	private int rango;
 	private String nombre;
 	private Plataforma plataforma;
-	private LocalDate year;
+	private String year;
 	private Genero genero;
 	private String editor;
 	private double naVentas;
