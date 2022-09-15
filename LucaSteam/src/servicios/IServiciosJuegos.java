@@ -14,7 +14,6 @@ public interface IServiciosJuegos {
 
 	public void importarDatos();
 	public void mostrarJuegos();
-	public boolean elegirOpcion();
 	public void altaJuego();
 
 	
