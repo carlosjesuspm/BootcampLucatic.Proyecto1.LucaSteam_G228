@@ -62,7 +62,6 @@ public class DatosJuegos implements IDatosJuegos{
 	 */
 	@Override
 	public void altaJuego(Juego juego) {
-		System.out.println("ALTA JUEGO:");
 		listaJuegos.add(juego);
 
 	}
@@ -71,7 +70,6 @@ public class DatosJuegos implements IDatosJuegos{
 		return listaJuegos;
 	}
 	
-	public void altaJuego(Juego juego) {};
 	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
 	public void listadoConsolaNintendo(){};
 	public void listadoEditores(String nombreEditor){};

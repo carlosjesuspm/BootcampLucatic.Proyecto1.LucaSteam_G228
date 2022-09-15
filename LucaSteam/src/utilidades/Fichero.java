@@ -42,7 +42,7 @@ public class Fichero {
 				lineas.remove(0);
 			for (String string : lineas) {
 				try {
-					String[] palabras = string.split(",");
+					String[] palabras = string.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 					juegos.add(FactoriaJuegos.crearJuego(palabras[0], palabras[1], palabras[2], palabras[3], palabras[4],
 							palabras[5], palabras[6], palabras[7], palabras[8], palabras[9], palabras[10]));
 				} catch (NumberFormatException e) {
