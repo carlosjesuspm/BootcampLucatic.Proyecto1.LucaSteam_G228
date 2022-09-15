@@ -79,8 +79,6 @@ public class DatosJuegos implements IDatosJuegos{
 		listaFiltrada=(ArrayList<Juego>) listaJuegos.stream().filter(juego -> juego.getGenero().name().equalsIgnoreCase(nombreGeneroJuego)).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
 		}
-		
-
 
 	public void listadoConsolaNintendo(){
 		listaFiltrada=(ArrayList<Juego>) listaJuegos.stream().filter(juego -> juego.getEditor().equalsIgnoreCase("Nintendo")).collect(Collectors.toList());
