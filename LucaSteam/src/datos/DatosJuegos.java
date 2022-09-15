@@ -34,7 +34,7 @@ public class DatosJuegos implements IDatosJuegos {
 	 * Metodo importarDatos(): recoge los datos del CSV.
 	 * 
 	 * @author Grupo2 - Tamara
-	 * @version 1
+	 * @version 1.0
 	 * @date 14/09
 	 */
 	@Override
@@ -65,9 +65,9 @@ public class DatosJuegos implements IDatosJuegos {
 	 * al ArrayList<> listaJuego.
 	 * 
 	 * @author Grupo2 - Tamara
-	 * @version 1
+	 * @version 1.0
 	 * @date 14/09
-	 * @param Juego juego
+	 * @param Juego
 	 */
 	@Override
 	public void altaJuego(Juego juego) {
@@ -76,23 +76,50 @@ public class DatosJuegos implements IDatosJuegos {
 
 	}
 
+	/**
+	 * Metodo para devolver la lista de juegos completa
+	 * 
+	 * @return La lista de juegos
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
+	 */
 	public ArrayList<Juego> getJuegos() {
 		return listaJuegos;
 	}
 
-	public void listadoGeneroPlataforma(Genero nombreGeneroJuego) {
+	/**
+	 * Metodo para mostrar un listado filtrado por el {@link Genero} introducido
+	 * @param nombreGeneroJuego Genero por el que se quiere filtrar
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
+	 */
+	public void listadoGenero(Genero nombreGeneroJuego) {
 		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
 				.filter(juego -> juego.getGenero().name().equalsIgnoreCase(nombreGeneroJuego.getGenero()))
 				.collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
 	}
 
+	/**
+	 * Metodo para mostrar un listado filtrado de la consola Nintendo
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
+	 */
 	public void listadoConsolaNintendo() {
 		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
 				.filter(juego -> juego.getEditor().equalsIgnoreCase("Nintendo")).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
 	};
 
+	/**
+	 * Metodo para mostrar un listado filtrado de los editores
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
+	 */
 	public void listadoEditores(String nombreEditor) {
 		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
 				.filter(juego -> juego.getEditor().equalsIgnoreCase(nombreEditor)).collect(Collectors.toList());

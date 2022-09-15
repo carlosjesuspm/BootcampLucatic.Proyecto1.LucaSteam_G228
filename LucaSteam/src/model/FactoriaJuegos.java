@@ -1,7 +1,5 @@
 package model;
 
-import java.time.LocalDate;
-
 import utilidades.LeerDatos;
 
 public class FactoriaJuegos {
@@ -54,6 +52,9 @@ public class FactoriaJuegos {
 	 * Metodo para crear juego pidiendo datos por teclado
 	 * 
 	 * @return Objeto {@link Juego} representando los datos introducidos por teclado
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
 	 */
 	public static Juego crearJuego() {
 		Juego j = new Juego();
@@ -74,6 +75,10 @@ public class FactoriaJuegos {
 	 * @return El valor en {@link Plataforma}
 	 * @throws IllegalArgumentException Si el valor introducido no consta como valor
 	 *                                  en {@link Plataforma}
+	 * 
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
 	 */
 	private static Plataforma stringToPlataforma(String plataforma) throws IllegalArgumentException {
 		for (Plataforma object : Plataforma.values()) {
@@ -91,6 +96,9 @@ public class FactoriaJuegos {
 	 * @return El valor en {@link Genero}
 	 * @throws IllegalArgumentException Si el valor introducido no consta como valor
 	 *                                  en {@link Genero}
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
 	 */
 	private static Genero stringToGenero(String genero) throws IllegalArgumentException {
 		for (Genero object : Genero.values()) {
