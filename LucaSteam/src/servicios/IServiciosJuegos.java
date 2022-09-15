@@ -15,6 +15,7 @@ public interface IServiciosJuegos {
 	public void mostrarJuegos();
 	public void altaJuego();
 	public void listadoGeneroPlataforma();
+	public void listadoGenero();
 	public void listadoConsolaNintendo();
 	public void listadoEditores(String nombreEditor);
 	public void filtrarSigloXX();

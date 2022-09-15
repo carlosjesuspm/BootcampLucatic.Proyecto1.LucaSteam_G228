@@ -8,28 +8,28 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import lombok.Data;
+import model.Genero;
 import model.Juego;
+import model.Plataforma;
 import utilidades.Fichero;
 
-
 /**
- * Clase DatosJuegos: gestiona los datos de la aplicacion.
- * Implementa la interfaz IDatosJuegos.
+ * Clase DatosJuegos: gestiona los datos de la aplicacion. Implementa la
+ * interfaz IDatosJuegos.
+ * 
  * @author Grupo2
  * @version 1
  * @date 14/09
  */
 @Data
-public class DatosJuegos implements IDatosJuegos{
-	
-	//LOGGER
+public class DatosJuegos implements IDatosJuegos {
+
+	// LOGGER
 	private static final Logger logger = LogManager.getLogger("DatosJuegos");
-	
+
 	private ArrayList<Juego> listaJuegos = new ArrayList<Juego>();
-	private  ArrayList<Juego> listaFiltrada = new ArrayList<Juego>();
-	
-	
-	
+	private ArrayList<Juego> listaFiltrada = new ArrayList<Juego>();
+
 	/**
 	 * Metodo importarDatos(): recoge los datos del CSV.
 	 * 
@@ -72,34 +72,43 @@ public class DatosJuegos implements IDatosJuegos{
 	@Override
 	public void altaJuego(Juego juego) {
 		listaJuegos.add(juego);
+		Fichero.escribirCsv(juego, "vgsales.csv");
 
 	}
-	
+
 	public ArrayList<Juego> getJuegos() {
 		return listaJuegos;
 	}
-	
-	
-	public void listadoGeneroPlataforma(String nombreGeneroJuego){
-		listaFiltrada=(ArrayList<Juego>) listaJuegos.stream().filter(juego -> juego.getGenero().name().equalsIgnoreCase(nombreGeneroJuego)).collect(Collectors.toList());
-		listaFiltrada.forEach(System.out::println);
-		}
 
-	public void listadoConsolaNintendo(){
-		listaFiltrada=(ArrayList<Juego>) listaJuegos.stream().filter(juego -> juego.getEditor().equalsIgnoreCase("Nintendo")).collect(Collectors.toList());
+	public void listadoGeneroPlataforma(Genero nombreGeneroJuego) {
+		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
+				.filter(juego -> juego.getGenero().name().equalsIgnoreCase(nombreGeneroJuego.getGenero()))
+				.collect(Collectors.toList());
+		listaFiltrada.forEach(System.out::println);
+	}
+
+	public void listadoConsolaNintendo() {
+		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
+				.filter(juego -> juego.getEditor().equalsIgnoreCase("Nintendo")).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
 	};
-	
-	public void listadoEditores(String nombreEditor){
-		listaFiltrada=(ArrayList<Juego>) listaJuegos.stream().filter(juego -> juego.getEditor().equalsIgnoreCase(nombreEditor)).collect(Collectors.toList());
+
+	public void listadoEditores(String nombreEditor) {
+		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
+				.filter(juego -> juego.getEditor().equalsIgnoreCase(nombreEditor)).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
 	};
-	
-	
-	public void filtrarSigloXX(){};
-	public void modificarJuego(int rango){};
-	public void eliminarJuego(int rango){};
-	public void filtrarAnnoPar(){};
-	
+
+	public void filtrarSigloXX() {
+	};
+
+	public void modificarJuego(int rango) {
+	};
+
+	public void eliminarJuego(int rango) {
+	};
+
+	public void filtrarAnnoPar() {
+	};
 
 }

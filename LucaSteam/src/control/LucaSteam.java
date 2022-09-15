@@ -17,6 +17,8 @@ import utilidades.LeerDatos;
  *
  */
 public class LucaSteam {
+	
+	public static final int ULTIMA_OPCION = 4;
 
 	private ServiciosJuegos s = new ServiciosJuegos();
 	private static final Logger logger = LogManager.getLogger("LucaSteam");
@@ -51,7 +53,8 @@ public class LucaSteam {
 			}
 			case 1 -> s.altaJuego();
 			case 2 -> s.mostrarJuegos();
-			case 3 -> s.listadoGeneroPlataforma();
+			case 3 -> s.listadoGenero();
+			case 4 -> s.listadoGeneroPlataforma();
 			default -> {
 				logger.warn("Default case ha entrado, algo ha ido mal");
 				return false;
@@ -66,7 +69,7 @@ public class LucaSteam {
 
 	/**
 	 * Metodo para pedir por teclado la opcion del menu elegida <br>
-	 * Opciones de 0 al 2
+	 * Opciones de 0 al 3
 	 * 
 	 * @return La opcion elegida en formato {@link Integer}
 	 */
@@ -79,7 +82,7 @@ public class LucaSteam {
 			entrada = LeerDatos.recogerString("Introduce una opcion.");
 			try {
 				opcion = Integer.parseInt(entrada);
-				if (opcion < 0 || opcion > 2)
+				if (opcion < 0 || opcion > ULTIMA_OPCION)
 					throw new IndexOutOfBoundsException();
 				correcto = true;
 			} catch (NumberFormatException | IndexOutOfBoundsException e) {
