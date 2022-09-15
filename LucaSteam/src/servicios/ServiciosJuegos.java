@@ -9,6 +9,7 @@ import datos.IDatosJuegos;
 import lombok.Data;
 import model.FactoriaJuegos;
 import model.Juego;
+import utilidades.LeerDatos;
 
 /**
  * Clase que contiene los métodos para conectar las peticiones de la capa
@@ -63,11 +64,16 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		d.altaJuego(j);
 	}
 	
-	
+	/**
+	 * Metodo para filtrar listado de juegos por género       
+	 */
+	public void listadoGeneroPlataforma(){
+		String nombreGeneroJuego=LeerDatos.recogerString("Introduce nombre plataforma: ");
+		d.listadoGeneroPlataforma(nombreGeneroJuego);
+	};
+
 
 	
-	public void altaJuego(Juego juego) {};
-	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
 	public void listadoConsolaNintendo(){};
 	public void listadoEditores(String nombreEditor){};
 	public void filtrarSigloXX(){};
