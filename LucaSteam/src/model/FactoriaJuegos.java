@@ -43,6 +43,24 @@ public class FactoriaJuegos {
 		j.setGlobalVentas(Double.parseDouble(globalVentas));
 		return j;
 	}
+	
+	public static Juego crearJuego()
+			throws NumberFormatException, IllegalArgumentException {
+
+		Juego j = new Juego();
+//		j.setRango(Integer.parseInt(rango));
+//		j.setNombre(nombre);
+//		j.setPlataforma(stringToPlataforma(plataforma));
+//		j.setYear(LocalDate.of(Integer.parseInt(year), 0, 0));
+//		j.setGenero(stringToGenero(genero));
+//		j.setEditor(editor);
+//		j.setNaVentas(Double.parseDouble(naVentas));
+//		j.setEuVentas(Double.parseDouble(euVentas));
+//		j.setJpVentas(Double.parseDouble(jpVentas));
+//		j.setOtherVentas(Double.parseDouble(otherVentas));
+//		j.setGlobalVentas(Double.parseDouble(globalVentas));
+		return j;
+	}
 
 	/**
 	 * Metodo privado que transforma el valor de la {@link Plataforma} de String a
