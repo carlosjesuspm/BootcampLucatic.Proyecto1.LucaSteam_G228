@@ -69,7 +69,7 @@ public class Fichero {
 	 */
 	public static void escribirCsv(Juego juego, String ruta_fichero) {
 
-		try (FileWriter file = new FileWriter(ruta_fichero);
+		try (FileWriter file = new FileWriter(ruta_fichero, true);
 			BufferedWriter writer = new BufferedWriter(file);)
 		{
 

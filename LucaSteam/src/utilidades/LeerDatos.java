@@ -33,7 +33,6 @@ public class LeerDatos {
 	@SuppressWarnings("resource")
 	public static String recogerString() throws InputMismatchException {
 		Scanner teclado = new Scanner(System.in);
-		logger.info("aplicando recogida de datos tipo string");
 		return teclado.nextLine();
 	}
 
@@ -64,7 +63,6 @@ public class LeerDatos {
 	@SuppressWarnings("resource")
 	public static int recogerInt() throws InputMismatchException {
 		Scanner teclado = new Scanner(System.in);
-		logger.info("aplicando recogida de datos tipo int");
 		return teclado.nextInt();
 	}
 
@@ -99,7 +97,6 @@ public class LeerDatos {
 	@SuppressWarnings("resource")
 	public static float recogerFloat() throws InputMismatchException {
 		Scanner teclado = new Scanner(System.in);
-		logger.info("aplicando recogida de datos tipo float");
 		return teclado.nextFloat();
 	}
 

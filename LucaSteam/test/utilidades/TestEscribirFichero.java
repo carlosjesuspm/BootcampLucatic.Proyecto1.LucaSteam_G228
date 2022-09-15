@@ -12,9 +12,7 @@ import model.Juego;
 
 public class TestEscribirFichero {
 
-		
-				
-	
+			
 	@Test
 	public void testEscribirJuego() {
 
@@ -36,7 +34,9 @@ public class TestEscribirFichero {
 			e.printStackTrace();
 		}
 		
-		
+		//Comprebo si ha escrito el juego que le he dicho
+		assertEquals(juegos.get(0).getNombre(), "Wii Sports");
+			
 	
 		
 		
