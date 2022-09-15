@@ -2,6 +2,7 @@ package gui;
 
 /**
  * Clase Menu - Muestra el menú en pantalla
+ * 
  * @author Grupo2 - Tamara
  * @version 1
  * @date 14/09
@@ -9,12 +10,15 @@ package gui;
  */
 
 public class Menu {
-	
-	public static void mostrarMenu(){
-		
+
+	/**
+	 * Método mostrarMenu - Muestra el índice de las funciones del programa
+	 */
+	public static void mostrarMenu() {
+
 		System.out.println("*************LUCASTEAM*************");
 		System.out.println("1. Dar de alta juego");
-		
+
 	}
-	
+
 }
