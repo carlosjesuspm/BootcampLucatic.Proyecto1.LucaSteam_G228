@@ -16,10 +16,7 @@ public interface IServiciosJuegos {
 	public void mostrarJuegos();
 	public boolean elegirOpcion();
 	public void altaJuego();
-
-	
-	public void altaJuego(Juego juego);
-	public void listadoGeneroPlataforma(String nombreGeneroJuego);
+	public void listadoGeneroPlataforma();
 	public void listadoConsolaNintendo();
 	public void listadoEditores(String nombreEditor);
 	public void filtrarSigloXX();
