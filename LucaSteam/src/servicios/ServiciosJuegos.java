@@ -71,12 +71,12 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	 */
 	public void listadoGenero() {
 		Genero nombreGeneroJuego = DatosMenus.pedirGenero();
-		d.listadoGeneroPlataforma(nombreGeneroJuego);
+		d.listadoGenero(nombreGeneroJuego);
 	};
 	
 	@Override
 	public void listadoGeneroPlataforma() {
-		d.listadoGeneroPlataforma(Genero.Platform);
+		d.listadoGenero(Genero.Platform);
 	}
 
 	public void listadoConsolaNintendo() {

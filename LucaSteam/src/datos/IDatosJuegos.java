@@ -8,7 +8,7 @@ public interface IDatosJuegos {
 	public void importarDatos();
 	public void mostrarJuegos();
 	public void altaJuego(Juego juego);
-	public void listadoGeneroPlataforma(Genero nombreGeneroJuego);
+	public void listadoGenero(Genero nombreGeneroJuego);
 	public void listadoConsolaNintendo();
 	public void listadoEditores(String nombreEditor);
 	public void filtrarSigloXX();
