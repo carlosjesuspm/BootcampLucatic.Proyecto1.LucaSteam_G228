@@ -72,6 +72,11 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		d.listadoGeneroPlataforma(nombreGeneroJuego);
 	};
 
+	
+	
+	
+	
+	
 	/**
 	 * 
 	 * Método que importa datos de juegos de un archvio CSV llamando a la capa datos.
