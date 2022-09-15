@@ -2,6 +2,7 @@ package utilidades;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.Test;
@@ -22,11 +23,21 @@ public class TestEscribirFichero {
 		Fichero.escribirCsv(j, "prueba.csv");
 		
 		//Leo el fichero CSV que he escrito
-		ArrayList<Juego> juegos = Fichero.leerCsv("prueba.csv", false);
+		ArrayList<Juego> juegos;
+		try {
+			juegos = Fichero.leerCsv("prueba.csv", false);
+
+			//Comprebo si ha escrito el juego que le he dicho
+			assertEquals(juegos.get(0).getNombre(), "Wii Sports");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		//Comprebo si ha escrito el juego que le he dicho
 		assertEquals(juegos.get(0).getNombre(), "Wii Sports");
 			
+	
 		
 		
 	}

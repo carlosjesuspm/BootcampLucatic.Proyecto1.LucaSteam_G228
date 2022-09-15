@@ -32,8 +32,9 @@ public class Fichero {
 	 * @return ArrayList<Juego> que contiene los juegos introducidos
 	 * @author Grupo 2
 	 * @version 2.0
+	 * @throws IOException 
 	 */
-	public static ArrayList<Juego> leerCsv(String ruta, boolean tieneCabecera) {
+	public static ArrayList<Juego> leerCsv(String ruta, boolean tieneCabecera) throws IOException {
 		ArrayList<Juego> juegos = new ArrayList<>();
 		try {
 			List<String> lineas = Files.readAllLines(Paths.get(ruta));
@@ -51,12 +52,11 @@ public class Fichero {
 					logger.warn(e.getMessage() + " en " + string);
 				}
 			}
+			return juegos;
 		} catch (IOException e) {
 			logger.warn(e.getMessage());
-		} catch (Exception e) {
-			logger.warn(e.getMessage());
+			throw e;
 		}
-		return juegos;
 
 	}
 
