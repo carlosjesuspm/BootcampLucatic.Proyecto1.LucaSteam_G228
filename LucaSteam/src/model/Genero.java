@@ -7,7 +7,7 @@ package model;
 public enum Genero {
 
 	Action("Action"), Adventure("Adventure"), Fighting("Fighting"), Misc("Misc"), Platform("Platform"),
-	Puzzle("Puzzle"), Racing("Racing"), RolePlaying("RolePlaying"), Shooter("Shooter"), Simulation("Simulation"),
+	Puzzle("Puzzle"), Racing("Racing"), RolePlaying("Role-Playing"), Shooter("Shooter"), Simulation("Simulation"),
 	Sports("Sports"), Strategy("Strategy");
 
 	private String genero;

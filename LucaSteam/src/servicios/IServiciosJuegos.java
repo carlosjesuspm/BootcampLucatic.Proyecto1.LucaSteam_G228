@@ -11,7 +11,6 @@ package servicios;
 public interface IServiciosJuegos {
 
 	public void importarDatos();
-	public void importarDatos(String ruta_archivo);
 	public void mostrarJuegos();
 	public void altaJuego();
 	public void listadoGeneroPlataforma();
