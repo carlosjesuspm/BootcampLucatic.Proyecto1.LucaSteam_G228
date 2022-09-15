@@ -20,6 +20,7 @@ import model.Juego;
  */
 
 public class Fichero {
+	
 	private static final Logger logger = LogManager.getLogger("Fichero");
 
 	/**

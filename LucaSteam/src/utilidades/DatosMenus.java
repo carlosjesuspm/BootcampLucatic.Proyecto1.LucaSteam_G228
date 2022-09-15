@@ -2,7 +2,6 @@ package utilidades;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import gui.Menu;
 import model.Genero;
 import model.Plataforma;

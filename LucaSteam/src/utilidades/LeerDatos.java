@@ -5,9 +5,6 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * implementación Scanner.
  * 
@@ -16,6 +13,7 @@ import org.apache.logging.log4j.Logger;
  */
 
 public class LeerDatos {
+	
 	private static final Logger logger = LogManager.getLogger("LeerDatos");
 
 	/**

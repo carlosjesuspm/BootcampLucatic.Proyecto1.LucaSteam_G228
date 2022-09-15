@@ -67,7 +67,7 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	public void listadoGenero() {
 		Genero nombreGeneroJuego = DatosMenus.pedirGenero();
 		d.listadoGenero(nombreGeneroJuego);
-	};
+	}
 
 	@Override
 	public void listadoGeneroPlataforma() {
