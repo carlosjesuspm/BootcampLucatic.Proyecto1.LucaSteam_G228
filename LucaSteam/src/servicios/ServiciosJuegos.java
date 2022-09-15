@@ -68,42 +68,9 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		Genero nombreGeneroJuego = DatosMenus.pedirGenero();
 		d.listadoGenero(nombreGeneroJuego);
 	};
-	
+
 	@Override
 	public void listadoGeneroPlataforma() {
 		d.listadoGenero(Genero.Platform);
 	}
-
-	
-	
-	
-	
-
-	
-	public void listadoConsolaNintendo() {
-	};
-
-	public void listadoEditores(String nombreEditor) {
-	};
-
-	public void filtrarSigloXX() {
-	};
-
-	public void modificarJuego(int rango) {
-	};
-
-	public void eliminarJuego(int rango) {
-	};
-
-	public void filtrarAnnoPar() {
-	}
-
-	@Override
-	public void importarDatos(String ruta_archivo) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-
 }
