@@ -22,6 +22,6 @@ public enum Genero {
 
 	public void setGenero(String genero) {
 		this.genero = genero;
-	}	
-	
+	}
+
 }

@@ -2,18 +2,13 @@ package servicios;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.jupiter.params.provider.NullEnum;
-
 import datos.DatosJuegos;
 import datos.IDatosJuegos;
-import gui.Menu;
 import lombok.Data;
 import model.FactoriaJuegos;
 import model.Genero;
 import model.Juego;
-import model.Plataforma;
 import utilidades.DatosMenus;
-import utilidades.LeerDatos;
 
 /**
  * Clase que contiene los métodos para conectar las peticiones de la capa
@@ -44,7 +39,7 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	public void importarDatos() {
 		d.importarDatos();
 	}
-	
+
 	/**
 	 * Metodo que muestra los juegos de los datos con
 	 * {@link DatosJuegos#mostrarJuegos()}
@@ -78,28 +73,4 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	public void listadoGeneroPlataforma() {
 		d.listadoGenero(Genero.Platform);
 	}
-
-
-	
-	public void listadoConsolaNintendo() {
-	}
-
-	public void listadoEditores(String nombreEditor) {
-	}
-	public void filtrarSigloXX() {
-	}
-
-	public void modificarJuego(int rango) {
-	}
-
-	public void eliminarJuego(int rango) {
-	}
-
-	public void filtrarAnnoPar() {
-	}
-
-
-	
-
-
 }

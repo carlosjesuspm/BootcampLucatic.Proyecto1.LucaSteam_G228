@@ -10,7 +10,6 @@ import org.apache.logging.log4j.Logger;
 import lombok.Data;
 import model.Genero;
 import model.Juego;
-import model.Plataforma;
 import utilidades.Fichero;
 
 /**
@@ -45,23 +44,6 @@ public class DatosJuegos implements IDatosJuegos {
 			logger.error("Error al abrir el archivo " + e.getMessage());
 		}
 	}
-	
-
-	/**
-	 * M
-	 * @param rutaArchivo
-	 */
-	public void importarDatos(String rutaArchivo) {
-		try {
-			listaJuegos = Fichero.leerCsv(rutaArchivo, true);
-		} catch (IOException e) {
-			logger.error("Error al abrir el archivo " + e.getMessage());
-		}
-	}
-
-	
-	
-
 
 	/**
 	 * Metodo para mostrar una lista de todos los juegos
@@ -107,6 +89,7 @@ public class DatosJuegos implements IDatosJuegos {
 
 	/**
 	 * Metodo para mostrar un listado filtrado por el {@link Genero} introducido
+	 * 
 	 * @param nombreGeneroJuego Genero por el que se quiere filtrar
 	 * @author Grupo2
 	 * @version 1.0
@@ -121,6 +104,7 @@ public class DatosJuegos implements IDatosJuegos {
 
 	/**
 	 * Metodo para mostrar un listado filtrado de la consola Nintendo
+	 * 
 	 * @author Grupo2
 	 * @version 1.0
 	 * @date 14/09
@@ -133,6 +117,7 @@ public class DatosJuegos implements IDatosJuegos {
 
 	/**
 	 * Metodo para mostrar un listado filtrado de los editores
+	 * 
 	 * @author Grupo2
 	 * @version 1.0
 	 * @date 14/09
@@ -142,17 +127,5 @@ public class DatosJuegos implements IDatosJuegos {
 				.filter(juego -> juego.getEditor().equalsIgnoreCase(nombreEditor)).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
 	}
-
-	public void filtrarSigloXX() {
-	};
-
-	public void modificarJuego(int rango) {
-	};
-
-	public void eliminarJuego(int rango) {
-	};
-
-	public void filtrarAnnoPar() {
-	};
 
 }

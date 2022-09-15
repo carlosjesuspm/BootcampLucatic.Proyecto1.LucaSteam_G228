@@ -1,14 +1,13 @@
 package model;
 
-
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
  * Clase entidad dedicada a crear objetos de tipo Juego <br>
- * Contenido de la clase creado con Lombok (getters, setters, equals, hashCode, toString) 
+ * Contenido de la clase creado con Lombok (getters, setters, equals, hashCode,
+ * toString)
  * 
  * @author Grupo 2
  * @version 1.0: 14/09/2022
@@ -29,5 +28,5 @@ public class Juego {
 	private double jpVentas;
 	private double otherVentas;
 	private double globalVentas;
-	
+
 }

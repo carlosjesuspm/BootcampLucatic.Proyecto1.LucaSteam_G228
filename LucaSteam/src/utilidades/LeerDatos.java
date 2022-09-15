@@ -8,10 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-
-
-
 /**
  * implementación Scanner.
  * 
@@ -66,10 +62,6 @@ public class LeerDatos {
 		return teclado.nextInt();
 	}
 
-
-
-
-	
 	/**
 	 * Metodo para leer entrada numerica {@link Integer} por teclado con
 	 * {@link Scanner} mostrando mensaje
