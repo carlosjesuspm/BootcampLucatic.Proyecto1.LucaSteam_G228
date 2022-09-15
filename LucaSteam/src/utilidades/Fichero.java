@@ -9,10 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import model.FactoriaJuegos;
 import model.Juego;
-import org.apache.logging.log4j.Logger;
+
 
 /**
  * Clase para tratar fichero CSV.
@@ -75,7 +76,7 @@ public class Fichero {
 
 			writer.write(juego.getRango()+","+juego.getNombre()+","+juego.getPlataforma().getPlataforma()+","+juego.getYear()+","+
 					juego.getGenero()+","+juego.getEditor()+","+juego.getNaVentas()+","+juego.getEuVentas()+","+juego.getJpVentas()+","+
-					juego.getOtherVentas()+","+juego.getGlobalVentas());
+					juego.getOtherVentas()+","+juego.getGlobalVentas()+"\n");
 
 		} catch (IOException e) {
 			// TODO: handle exception

@@ -2,18 +2,13 @@ package servicios;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.jupiter.params.provider.NullEnum;
-
 import datos.DatosJuegos;
 import datos.IDatosJuegos;
-import gui.Menu;
 import lombok.Data;
 import model.FactoriaJuegos;
 import model.Genero;
 import model.Juego;
-import model.Plataforma;
 import utilidades.DatosMenus;
-import utilidades.LeerDatos;
 
 /**
  * Clase que contiene los métodos para conectar las peticiones de la capa

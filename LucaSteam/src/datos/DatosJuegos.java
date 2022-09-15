@@ -10,7 +10,6 @@ import org.apache.logging.log4j.Logger;
 import lombok.Data;
 import model.Genero;
 import model.Juego;
-import model.Plataforma;
 import utilidades.Fichero;
 
 /**
