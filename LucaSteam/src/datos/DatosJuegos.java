@@ -1,5 +1,6 @@
 package datos;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -38,7 +39,11 @@ public class DatosJuegos implements IDatosJuegos{
 	 */
 	@Override
 	public void importarDatos() {
-		listaJuegos = Fichero.leerCsv("vgsales.csv", true);
+		try {
+			listaJuegos = Fichero.leerCsv("vgsales.csv", true);
+		} catch (IOException e) {
+			logger.error("Error al abrir el archivo " + e.getMessage());
+		}
 	}
 
 	/**
