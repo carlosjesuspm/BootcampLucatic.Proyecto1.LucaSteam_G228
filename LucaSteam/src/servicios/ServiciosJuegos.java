@@ -11,6 +11,7 @@ import lombok.Data;
 import model.FactoriaJuegos;
 import model.Juego;
 import utilidades.LeerDatos;
+import model.Juego;
 
 /**
  * Clase que contiene los métodos para conectar las peticiones de la capa
@@ -41,7 +42,7 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	public void importarDatos() {
 		d.importarDatos();
 	}
-
+	
 	/**
 	 * Metodo que muestra los juegos de los datos con
 	 * {@link DatosJuegos#mostrarJuegos()}
@@ -117,4 +118,15 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	
 	
 
+	
+	public void altaJuego(Juego juego) {};
+	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
+	public void listadoConsolaNintendo(){};
+	public void listadoEditores(String nombreEditor){};
+	public void filtrarSigloXX(){};
+	public void modificarJuego(int rango){};
+	public void eliminarJuego(int rango){};
+	public void filtrarAnnoPar(){};
+
+	
 }

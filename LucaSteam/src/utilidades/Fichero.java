@@ -1,5 +1,7 @@
 package utilidades;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -14,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * Clase para tratar fichero CSV.
- * 
+ *
  * @author Lamia,
  * @version 1.0: 14/09/2022
  */
@@ -24,11 +26,11 @@ public class Fichero {
 
 	/**
 	 * Descripción del método: Metodo que convierte Csv en ArrayList.
-	 * 
+	 *
 	 * @param ruta La ruta del archivo csv que se quiere leer
 	 * @param tieneCabecera {@code true} tiene cabecera, de otra manera no tiene
 	 * @return ArrayList<Juego> que contiene los juegos introducidos
-	 * @author Lamia
+	 * @author Grupo 2
 	 * @version 2.0
 	 */
 	public static ArrayList<Juego> leerCsv(String ruta, boolean tieneCabecera) {
@@ -53,9 +55,62 @@ public class Fichero {
 			logger.warn(e.getMessage());
 		} catch (Exception e) {
 			logger.warn(e.getMessage());
-		} 
+		}
 		return juegos;
 
 	}
 
+	/**
+	 * Método que escribe un objeto juego en un fichero CSV
+	 *
+	 * @param Juego - Objeto de tipo juego.
+	 * @author Grupo 2
+	 * @version 1.0
+	 */
+	public static void escribirCsv(Juego juego) {
+
+		try (FileWriter file = new FileWriter("vgsales.csv");
+			BufferedWriter writer = new BufferedWriter(file);)
+		{
+
+			writer.write(juego.getRango()+","+juego.getNombre()+","+juego.getPlataforma().getPlataforma()+","+juego.getYear()+","+
+					juego.getGenero()+","+juego.getEditor()+","+juego.getNaVentas()+","+juego.getEuVentas()+","+juego.getJpVentas()+","+
+					juego.getOtherVentas()+","+juego.getGlobalVentas());
+
+		} catch (IOException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			logger.warn("Problema al escribir el fichero. Método escribirCsv()");
+
+		}
+	}
+
+	/**
+	 * Método que escribe un objeto juego en un fichero CSV
+	 *
+	 * @param Juego - Objeto de tipo juego.
+	 * @author Álvaro Román
+	 * @version 1.0
+	 */
+	public static void escribirCsv(ArrayList<Juego> juegos) {
+
+		for (Juego juego : juegos) {
+			escribirCsv(juego);
+		}
+
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

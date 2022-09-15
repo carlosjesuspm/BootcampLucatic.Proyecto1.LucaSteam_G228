@@ -1,7 +1,6 @@
 package utilidades;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -60,6 +59,13 @@ public class LeerDatos {
 		return teclado.nextInt();
 	}
 
+
+	public static String recogerString(String mensaje) throws InputMismatchException{
+			System.out.println(mensaje);
+			return recogerString();
+	}
+
+	
 	/**
 	 * Metodo para leer entrada numerica {@link Integer} por teclado con
 	 * {@link Scanner} mostrando mensaje
