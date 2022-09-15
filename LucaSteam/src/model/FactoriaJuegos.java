@@ -59,9 +59,7 @@ public class FactoriaJuegos {
 		j.setGenero(stringToGenero(LeerDatos.recogerString("Introduce género del juego: ")));
 		j.setEditor(LeerDatos.recogerString("Introduce nombre editor: "));
 		return j;
-	};
-	
-	
+	}
 	
 	
 	
@@ -92,10 +90,13 @@ public class FactoriaJuegos {
 		case "N64" -> p = Plataforma.N64;
 		case "NG" -> p = Plataforma.NG;
 		case "PC" -> p = Plataforma.PC;
+		case "PCFX" -> p = Plataforma.PCFX;
+		case "PS" -> p = Plataforma.PS;
 		case "PS2" -> p = Plataforma.PS2;
 		case "PS3" -> p = Plataforma.PS3;
 		case "PS4" -> p = Plataforma.PS4;
 		case "PSV" -> p = Plataforma.PSV;
+		case "PSP" -> p = Plataforma.PSP;
 		case "SAT" -> p = Plataforma.SAT;
 		case "SCD" -> p = Plataforma.SCD;
 		case "SNES" -> p = Plataforma.SNES;
@@ -132,7 +133,7 @@ public class FactoriaJuegos {
 		case "Platform" -> g = Genero.Platform;
 		case "Puzzle" -> g = Genero.Puzzle;
 		case "Racing" -> g = Genero.Racing;
-		case "RolePlaying" -> g = Genero.RolePlaying;
+		case "Role-Playing" -> g = Genero.RolePlaying;
 		case "Shooter" -> g = Genero.Shooter;
 		case "Simulation" -> g = Genero.Simulation;
 		case "Sports" -> g = Genero.Sports;

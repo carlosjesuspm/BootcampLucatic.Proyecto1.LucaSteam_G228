@@ -23,7 +23,9 @@ public class LucaSteam {
 	public void start() {
 		s.importarDatos();
 		do {
-			Menu.mostrarMenu();
-		} while (!s.elegirOpcion());
+			Menu.menuPrincipal();
+			System.out.println();
+		} while (s.elegirOpcion());
+		System.out.println("Adios muy buenas");
 	}
 }

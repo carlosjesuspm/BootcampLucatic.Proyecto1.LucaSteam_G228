@@ -42,7 +42,7 @@ public class Fichero {
 				lineas.remove(0);
 			for (String string : lineas) {
 				try {
-					String[] palabras = string.split(",");
+					String[] palabras = string.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 					juegos.add(FactoriaJuegos.crearJuego(palabras[0], palabras[1], palabras[2], palabras[3], palabras[4],
 							palabras[5], palabras[6], palabras[7], palabras[8], palabras[9], palabras[10]));
 				} catch (NumberFormatException e) {
@@ -67,9 +67,9 @@ public class Fichero {
 	 * @author Grupo 2
 	 * @version 1.0
 	 */
-	public static void escribirCsv(Juego juego) {
+	public static void escribirCsv(Juego juego, String ruta_fichero) {
 
-		try (FileWriter file = new FileWriter("vgsales.csv");
+		try (FileWriter file = new FileWriter(ruta_fichero);
 			BufferedWriter writer = new BufferedWriter(file);)
 		{
 
@@ -92,10 +92,10 @@ public class Fichero {
 	 * @author Álvaro Román
 	 * @version 1.0
 	 */
-	public static void escribirCsv(ArrayList<Juego> juegos) {
+	public static void escribirCsv(ArrayList<Juego> juegos, String ruta_fichero) {
 
 		for (Juego juego : juegos) {
-			escribirCsv(juego);
+			escribirCsv(juego, ruta_fichero);
 		}
 
 	}
