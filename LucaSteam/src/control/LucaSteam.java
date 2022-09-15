@@ -51,6 +51,7 @@ public class LucaSteam {
 			}
 			case 1 -> s.altaJuego();
 			case 2 -> s.mostrarJuegos();
+			case 3 -> s.listadoGeneroPlataforma();
 			default -> {
 				logger.warn("Default case ha entrado, algo ha ido mal");
 				return false;
