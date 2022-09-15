@@ -14,19 +14,28 @@ import model.Plataforma;
 
 public class Menu {
 
+	/**
+	 * Metodo estatico para mostrar el menu principal
+	 * 
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
+	 */
 	public static void menuPrincipal() {
-
 		System.out.println("*************LUCASTEAM*************");
 		System.out.println("1. Dar de alta juego");
 		System.out.println("2. Mostrar juegos");
 		System.out.println("3. Filtrar juegos por genero");
 		System.out.println("4. Mostrar juegos de genero \"Plataforma\"");
 		System.out.println("0. Salir");
-
 	}
 
 	/**
 	 * Metodo estatico para mostrar un menu de los generos
+	 * 
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
 	 */
 	public static void menuGenero() {
 		System.out.println("*************GENERO*************");
@@ -38,6 +47,10 @@ public class Menu {
 
 	/**
 	 * Metodo estatico para mostrar un menu de las plataformas disponibles
+	 * 
+	 * @author Grupo2
+	 * @version 1.0
+	 * @date 14/09
 	 */
 	public static void menuPlataforma() {
 		System.out.println("*************PLATAFORMA*************");

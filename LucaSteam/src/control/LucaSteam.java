@@ -17,7 +17,7 @@ import utilidades.LeerDatos;
  *
  */
 public class LucaSteam {
-	
+
 	public static final int ULTIMA_OPCION = 4;
 
 	private ServiciosJuegos s = new ServiciosJuegos();
@@ -37,12 +37,13 @@ public class LucaSteam {
 		} while (elegirOpcion());
 		System.out.println("Adios muy buenas");
 	}
-	
-	
+
 	/**
 	 * Metodo para tratar las opciones del menu
 	 * 
 	 * @return {@code true} si la opcion elegida es salir (0)
+	 * @author Grupo2
+	 * @version 1.0
 	 */
 	public boolean elegirOpcion() {
 		try {
@@ -72,6 +73,7 @@ public class LucaSteam {
 	 * Opciones de 0 al 3
 	 * 
 	 * @return La opcion elegida en formato {@link Integer}
+	 * @author Grupo2
 	 */
 	private int pedirOpcion() {
 		boolean correcto = false;
