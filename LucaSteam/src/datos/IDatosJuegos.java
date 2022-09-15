@@ -1,5 +1,5 @@
 package datos;
-
+import java.util.ArrayList;
 import model.Juego;
 
 /**
@@ -25,6 +25,5 @@ public interface IDatosJuegos {
 	public void modificarJuego(int rango);
 	public void eliminarJuego(int rango);
 	public void filtrarAnnoPar();
-	
 	
 }

@@ -11,9 +11,12 @@ import model.Juego;
  */
 
 public interface IServiciosJuegos {
-	
+
 	public void importarDatos();
 	public void mostrarJuegos();
+	public boolean elegirOpcion();
+	public void altaJuego();
+
 	
 	public void altaJuego(Juego juego);
 	public void listadoGeneroPlataforma(String nombreGeneroJuego);

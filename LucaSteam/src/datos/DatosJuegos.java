@@ -50,6 +50,26 @@ public class DatosJuegos implements IDatosJuegos {
 			System.out.println(juego.toString());
 		}
 	}
+
+	/**
+	 * Metodo altaJuego(): Recibe un objeto de tipo Juego como argumento y lo añade
+	 * al ArrayList<> listaJuego.
+	 * 
+	 * @author Grupo2 - Tamara
+	 * @version 1
+	 * @date 14/09
+	 * @param Juego juego
+	 */
+	@Override
+	public void altaJuego(Juego juego) {
+		System.out.println("ALTA JUEGO:");
+		listaJuegos.add(juego);
+
+	}
+	
+	public ArrayList<Juego> getJuegos() {
+		return listaJuegos;
+	}
 	
 	public void altaJuego(Juego juego) {};
 	public void listadoGeneroPlataforma(String nombreGeneroJuego){};

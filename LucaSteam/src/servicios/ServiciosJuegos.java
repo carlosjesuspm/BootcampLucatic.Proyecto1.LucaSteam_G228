@@ -1,11 +1,16 @@
 package servicios;
 
+import java.util.InputMismatchException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import datos.DatosJuegos;
 import datos.IDatosJuegos;
 import lombok.Data;
+import model.FactoriaJuegos;
+import model.Juego;
+import utilidades.LeerDatos;
 import model.Juego;
 
 /**
@@ -19,9 +24,9 @@ import model.Juego;
 @Data
 public class ServiciosJuegos implements IServiciosJuegos {
 
-	//LOGGER
+	// LOGGER
 	private static final Logger logger = LogManager.getLogger("ServiciosJuegos");
-	
+
 	private IDatosJuegos d = new DatosJuegos();
 
 	/**
@@ -33,15 +38,14 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	 * @version 1.0
 	 * 
 	 */
-
 	@Override
 	public void importarDatos() {
 		d.importarDatos();
-
 	}
 	
 	/**
-	 * Metodo que muestra los juegos de los datos con {@link DatosJuegos#mostrarJuegos()}
+	 * Metodo que muestra los juegos de los datos con
+	 * {@link DatosJuegos#mostrarJuegos()}
 	 * 
 	 * @author Grupo2
 	 * @version 1.0
@@ -50,6 +54,69 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	public void mostrarJuegos() {
 		d.mostrarJuegos();
 	}
+
+	/**
+	 * Metodo para tratar las opciones del menu
+	 * 
+	 * @return {@code true} si la opcion elegida es salir (0)
+	 */
+	@Override
+	public boolean elegirOpcion() {
+		try {
+			int opcion = pedirOpcion();
+			switch (opcion) {
+			case 0 -> {
+				return false;
+			}
+			case 1 -> altaJuego();
+			case 2 -> mostrarJuegos();
+			default -> {
+				logger.warn("Default case ha entrado, algo ha ido mal");
+				return false;
+			}
+			}
+
+		} catch (InputMismatchException e) {
+			logger.error("Entrada por teclado erronea");
+		}
+		return true;
+	}
+
+	/**
+	 * Metodo para pedir por teclado la opcion del menu elegida <br>
+	 * Opciones de 0 al 2
+	 * 
+	 * @return La opcion elegida en formato {@link Integer}
+	 */
+	private int pedirOpcion() {
+		boolean correcto = false;
+		int opcion = 0;
+		String entrada;
+
+		do {
+			entrada = LeerDatos.recogerString("Introduce una opcion.");
+			try {
+				opcion = Integer.parseInt(entrada);
+				if (opcion < 0 || opcion > 2)
+					throw new IndexOutOfBoundsException();
+				correcto = true;
+			} catch (NumberFormatException | IndexOutOfBoundsException e) {
+				logger.warn("La opcion metida no es correcta");
+			}
+		} while (!correcto);
+		return opcion;
+	}
+
+	/**
+	 * Metodo para dar de alta un juego pidiendo datos por teclado        
+	 */
+	@Override
+	public void altaJuego() {
+		Juego j = FactoriaJuegos.crearJuego();
+		d.altaJuego(j);
+	}
+	
+	
 
 	
 	public void altaJuego(Juego juego) {};

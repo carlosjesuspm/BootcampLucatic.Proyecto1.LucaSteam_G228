@@ -13,19 +13,50 @@ import java.util.Scanner;
  */
 
 public class LeerDatos {
+	private static final Logger logger = LogManager.getLogger("LeerDatos");
 
 	/**
-	 * En este método el objetivo es registrar la entradas de datos por parte del
-	 * usuario de tipo String
+	 * Metodo para leer entrada por teclado con clase {@link Scanner}
 	 * 
-	 * @param String devuelve mensaje
-	 * @return String
+	 * @return El objeto {@code String} que representa la entrada de teclado
+	 * @throws InputMismatchException Si el tipo de los datos no es el correcto
+	 * @author Grupo2
+	 * @version 1.0
 	 */
-
 	@SuppressWarnings("resource")
-	public static String recogerString() throws InputMismatchException{
+	public static String recogerString() throws InputMismatchException {
 		Scanner teclado = new Scanner(System.in);
 		return teclado.nextLine();
+	}
+
+	/**
+	 * Metodo para leer entrada por teclado con clase {@link Scanner} mostrando
+	 * mensaje
+	 * 
+	 * @param mensaje Mensaje para mostrar por consola
+	 * @return Objeto {@link String} que representa la entrada por teclado
+	 * @throws InputMismatchException Si el tipo de los datos no es el correcto
+	 * @author Grupo2
+	 * @version 1.0
+	 */
+	public static String recogerString(String mensaje) throws InputMismatchException {
+		System.out.println(mensaje);
+		return recogerString();
+	}
+
+	/**
+	 * Metodo para leer entrada numerica {@link Integer} por teclado con
+	 * {@link Scanner}
+	 * 
+	 * @return Objeto {@link String} que representa la entrada por teclado numerica
+	 * @throws InputMismatchException Si el tipo de los datos no es el correcto
+	 * @author Grupo2
+	 * @version 1.0
+	 */
+	@SuppressWarnings("resource")
+	public static int recogerInt() throws InputMismatchException {
+		Scanner teclado = new Scanner(System.in);
+		return teclado.nextInt();
 	}
 
 
@@ -36,40 +67,46 @@ public class LeerDatos {
 
 	
 	/**
-	 * Método registrar entrada datos
+	 * Metodo para leer entrada numerica {@link Integer} por teclado con
+	 * {@link Scanner} mostrando mensaje
 	 * 
-	 * @param String devuelve int
-	 * @return int
-	 * 
+	 * @param mensaje Mensaje que se quiere mostrar
+	 * @return Objeto {@link Integer} que representa la entrada por teclado numerica
+	 * @throws InputMismatchException Si el tipo de los datos no es el correcto
+	 * @author Grupo2
+	 * @version 1.0
 	 */
-	
-	@SuppressWarnings("resource")
-	public static int recogerInt() throws InputMismatchException{
-		Scanner teclado = new Scanner(System.in);
-		return teclado.nextInt();
-	}
-
-	public static int recogerInt(String mensaje)throws InputMismatchException {
+	public static int recogerInt(String mensaje) throws InputMismatchException {
 		System.out.println(mensaje);
 		return recogerInt();
 	}
 
-
 	/**
-	 * En este método el objetivo es registrar la entradas de datos por parte del
-	 * usuario de tipo Float
+	 * Metodo para leer la entrada numerica {@link Float} por teclado con
+	 * {@link Scanner}
 	 * 
-	 * @param String devuelve float
-	 * @return float
+	 * @return Objeto {@link Float} que representa la entrada por teclado
+	 * @throws InputMismatchException Si el tipo de los datos no es el correcto
+	 * @author Grupo2
+	 * @version 1.0
 	 */
-
 	@SuppressWarnings("resource")
 	public static float recogerFloat() throws InputMismatchException {
 		Scanner teclado = new Scanner(System.in);
 		return teclado.nextFloat();
 	}
 
-	public static float recogerFloat(String mensaje) throws InputMismatchException{
+	/**
+	 * Metodo para leer la entrada numerica {@link Float} por teclado con
+	 * {@link Scanner} mostrando mensaje
+	 * 
+	 * @param mensaje Mensaje que se quiere mostrar
+	 * @return Objeto {@link Float} que representa la entrada por teclado
+	 * @throws InputMismatchException Si el tipo de los datos no es el correcto
+	 * @author Grupo2
+	 * @version 1.0
+	 */
+	public static float recogerFloat(String mensaje) throws InputMismatchException {
 		System.out.println(mensaje);
 		return recogerFloat();
 	}
