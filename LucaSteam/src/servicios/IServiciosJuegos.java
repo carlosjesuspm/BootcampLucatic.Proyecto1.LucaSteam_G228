@@ -1,7 +1,5 @@
 package servicios;
 
-import model.Juego;
-
 /**
  * Interfaz que contiene los métodos que tiene que implementar la capa servicios.
  * Estos métodos conectan las peticiones de la capa control con la capa de datos.
@@ -13,18 +11,10 @@ import model.Juego;
 public interface IServiciosJuegos {
 
 	public void importarDatos();
+	public void importarDatos(String ruta_archivo);
 	public void mostrarJuegos();
 	public void altaJuego();
 
-	
-	public void altaJuego(Juego juego);
-	public void listadoGeneroPlataforma(String nombreGeneroJuego);
-	public void listadoConsolaNintendo();
-	public void listadoEditores(String nombreEditor);
-	public void filtrarSigloXX();
-	public void modificarJuego(int rango);
-	public void eliminarJuego(int rango);
-	public void filtrarAnnoPar();
 	
 	
 		

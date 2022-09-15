@@ -62,18 +62,23 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		Juego j = FactoriaJuegos.crearJuego();
 		d.altaJuego(j);
 	}
-	
-	
 
+	/**
+	 * 
+	 * Método que importa datos de juegos de un archvio CSV llamando a la capa datos.
+	 * @param String - ruta del fichero
+	 * @author Álvaro Román
+	 * @since 1.0
+	 */	
+	@Override
+	public void importarDatos(String ruta_archivo) {
+		// TODO Auto-generated method stub
+		d.importarDatos(ruta_archivo);
+		logger.info("Importando datos en la capa servicios.");
+		
+	}
 	
-	public void altaJuego(Juego juego) {};
-	public void listadoGeneroPlataforma(String nombreGeneroJuego){};
-	public void listadoConsolaNintendo(){};
-	public void listadoEditores(String nombreEditor){};
-	public void filtrarSigloXX(){};
-	public void modificarJuego(int rango){};
-	public void eliminarJuego(int rango){};
-	public void filtrarAnnoPar(){}
+	
 
 
 	
