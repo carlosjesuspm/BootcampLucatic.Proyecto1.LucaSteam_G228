@@ -45,6 +45,9 @@ public class DatosJuegos implements IDatosJuegos {
 			logger.error("Error al abrir el archivo " + e.getMessage());
 		}
 	}
+	
+	
+	
 
 	/**
 	 * Metodo para mostrar una lista de todos los juegos
