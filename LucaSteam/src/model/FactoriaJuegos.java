@@ -49,7 +49,12 @@ public class FactoriaJuegos {
 		j.setGlobalVentas(Double.parseDouble(globalVentas));
 		return j;
 	}
-	
+
+	/**
+	 * Metodo para crear juego pidiendo datos por teclado
+	 * 
+	 * @return Objeto {@link Juego} representando los datos introducidos por teclado
+	 */
 	public static Juego crearJuego() {
 		Juego j = new Juego();
 		j.setRango(LeerDatos.recogerInt("Introduce rango juego: "));
@@ -60,9 +65,6 @@ public class FactoriaJuegos {
 		j.setEditor(LeerDatos.recogerString("Introduce nombre editor: "));
 		return j;
 	}
-	
-	
-	
 
 	/**
 	 * Metodo privado que transforma el valor de la {@link Plataforma} de String a
@@ -74,43 +76,11 @@ public class FactoriaJuegos {
 	 *                                  en {@link Plataforma}
 	 */
 	private static Plataforma stringToPlataforma(String plataforma) throws IllegalArgumentException {
-		Plataforma p;
-		switch (plataforma) {
-		case "2600" -> p = Plataforma._2600;
-		case "3DO" -> p = Plataforma._3DO;
-		case "3DS" -> p = Plataforma._3DS;
-		case "DC" -> p = Plataforma.DC;
-		case "DS" -> p = Plataforma.DS;
-		case "GB" -> p = Plataforma.GB;
-		case "GBA" -> p = Plataforma.GBA;
-		case "GC" -> p = Plataforma.GC;
-		case "GEN" -> p = Plataforma.GEN;
-		case "GG" -> p = Plataforma.GG;
-		case "NES" -> p = Plataforma.NES;
-		case "N64" -> p = Plataforma.N64;
-		case "NG" -> p = Plataforma.NG;
-		case "PC" -> p = Plataforma.PC;
-		case "PCFX" -> p = Plataforma.PCFX;
-		case "PS" -> p = Plataforma.PS;
-		case "PS2" -> p = Plataforma.PS2;
-		case "PS3" -> p = Plataforma.PS3;
-		case "PS4" -> p = Plataforma.PS4;
-		case "PSV" -> p = Plataforma.PSV;
-		case "PSP" -> p = Plataforma.PSP;
-		case "SAT" -> p = Plataforma.SAT;
-		case "SCD" -> p = Plataforma.SCD;
-		case "SNES" -> p = Plataforma.SNES;
-		case "TG16" -> p = Plataforma.TG16;
-		case "Wii" -> p = Plataforma.Wii;
-		case "WiiU" -> p = Plataforma.WiiU;
-		case "WS" -> p = Plataforma.WS;
-		case "X360" -> p = Plataforma.X360;
-		case "XB" -> p = Plataforma.XB;
-		case "XOne" -> p = Plataforma.XOne;
-
-		default -> throw new IllegalArgumentException("Unexpected value: " + plataforma);
+		for (Plataforma object : Plataforma.values()) {
+			if (plataforma.toLowerCase().equals(object.getPlataforma().toLowerCase()))
+				return object;
 		}
-		return p;
+		throw new IllegalArgumentException("Unexpected value: " + plataforma);
 	}
 
 	/**
@@ -123,25 +93,10 @@ public class FactoriaJuegos {
 	 *                                  en {@link Genero}
 	 */
 	private static Genero stringToGenero(String genero) throws IllegalArgumentException {
-		Genero g;
-
-		switch (genero) {
-		case "Action" -> g = Genero.Action;
-		case "Adventure" -> g = Genero.Adventure;
-		case "Fighting" -> g = Genero.Fighting;
-		case "Misc" -> g = Genero.Misc;
-		case "Platform" -> g = Genero.Platform;
-		case "Puzzle" -> g = Genero.Puzzle;
-		case "Racing" -> g = Genero.Racing;
-		case "Role-Playing" -> g = Genero.RolePlaying;
-		case "Shooter" -> g = Genero.Shooter;
-		case "Simulation" -> g = Genero.Simulation;
-		case "Sports" -> g = Genero.Sports;
-		case "Strategy" -> g = Genero.Strategy;
-
-		default -> throw new IllegalArgumentException("Unexpected value: " + genero);
+		for (Genero object : Genero.values()) {
+			if (genero.toLowerCase().equals(object.getGenero().toLowerCase()))
+				return object;
 		}
-
-		return g;
+		throw new IllegalArgumentException("Unexpected value: " + genero);
 	}
 }

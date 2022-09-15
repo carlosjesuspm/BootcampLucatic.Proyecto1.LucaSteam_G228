@@ -1,5 +1,6 @@
 package datos;
-import java.util.ArrayList;
+
+import model.Genero;
 import model.Juego;
 
 public interface IDatosJuegos {
@@ -7,7 +8,7 @@ public interface IDatosJuegos {
 	public void importarDatos();
 	public void mostrarJuegos();
 	public void altaJuego(Juego juego);
-	public void listadoGeneroPlataforma(String nombreGeneroJuego);
+	public void listadoGeneroPlataforma(Genero nombreGeneroJuego);
 	public void listadoConsolaNintendo();
 	public void listadoEditores(String nombreEditor);
 	public void filtrarSigloXX();

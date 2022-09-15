@@ -1,14 +1,18 @@
 package servicios;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.params.provider.NullEnum;
 
 import datos.DatosJuegos;
 import datos.IDatosJuegos;
+import gui.Menu;
 import lombok.Data;
 import model.FactoriaJuegos;
+import model.Genero;
 import model.Juego;
+import model.Plataforma;
+import utilidades.DatosMenus;
 import utilidades.LeerDatos;
 
 /**
@@ -40,7 +44,7 @@ public class ServiciosJuegos implements IServiciosJuegos {
 	public void importarDatos() {
 		d.importarDatos();
 	}
-	
+
 	/**
 	 * Metodo que muestra los juegos de los datos con
 	 * {@link DatosJuegos#mostrarJuegos()}
@@ -53,34 +57,46 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		d.mostrarJuegos();
 	}
 
-	
-
 	/**
-	 * Metodo para dar de alta un juego pidiendo datos por teclado        
+	 * Metodo para dar de alta un juego pidiendo datos por teclado
 	 */
 	@Override
 	public void altaJuego() {
 		Juego j = FactoriaJuegos.crearJuego();
 		d.altaJuego(j);
 	}
-	
+
 	/**
-	 * Metodo para filtrar listado de juegos por género       
+	 * Metodo para filtrar listado de juegos por género
 	 */
-	public void listadoGeneroPlataforma(){
-		String nombreGeneroJuego=LeerDatos.recogerString("Introduce nombre plataforma: ");
+	public void listadoGenero() {
+		Genero nombreGeneroJuego = DatosMenus.pedirGenero();
 		d.listadoGeneroPlataforma(nombreGeneroJuego);
 	};
+	
+	@Override
+	public void listadoGeneroPlataforma() {
+		d.listadoGeneroPlataforma(Genero.Platform);
+	}
 
+	public void listadoConsolaNintendo() {
+	};
+
+	public void listadoEditores(String nombreEditor) {
+	};
+
+	public void filtrarSigloXX() {
+	};
+
+	public void modificarJuego(int rango) {
+	};
+
+	public void eliminarJuego(int rango) {
+	};
+
+	public void filtrarAnnoPar() {
+	}
 
 	
-	public void listadoConsolaNintendo(){};
-	public void listadoEditores(String nombreEditor){};
-	public void filtrarSigloXX(){};
-	public void modificarJuego(int rango){};
-	public void eliminarJuego(int rango){};
-	public void filtrarAnnoPar(){}
 
-
-	
 }
