@@ -3,11 +3,8 @@ package datos;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-
 import model.FactoriaJuegos;
-import model.Juego;
+
 
 public class AltaJuego {
 
