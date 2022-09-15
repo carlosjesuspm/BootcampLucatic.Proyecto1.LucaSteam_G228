@@ -9,6 +9,7 @@ import datos.IDatosJuegos;
 import lombok.Data;
 import model.FactoriaJuegos;
 import model.Juego;
+import utilidades.LeerDatos;
 
 /**
  * Clase que contiene los métodos para conectar las peticiones de la capa
