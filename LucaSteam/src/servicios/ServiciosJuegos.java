@@ -79,6 +79,7 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		d.listadoGenero(Genero.Platform);
 	}
 
+
 	/**
 	 * 
 	 * Método que importa datos de juegos de un archvio CSV llamando a la capa
@@ -95,6 +96,14 @@ public class ServiciosJuegos implements IServiciosJuegos {
 		logger.info("Importando datos en la capa servicios.");
 
 	}
+
+
+	
+	
+	
+	
+
+	
 
 	public void listadoConsolaNintendo() {
 	};
@@ -113,5 +122,15 @@ public class ServiciosJuegos implements IServiciosJuegos {
 
 	public void filtrarAnnoPar() {
 	}
+
+
+	@Override
+	public void importarDatos(String ruta_archivo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
 
 }
