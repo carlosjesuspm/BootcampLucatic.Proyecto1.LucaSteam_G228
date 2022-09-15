@@ -15,9 +15,6 @@ public class Menu {
 	/**
 	 * Método mostrarMenu - Muestra el índice de las funciones del programa
 	 */
-	public static void mostrarMenu(){
-
-	
 	public static void menuPrincipal(){
 		
 
