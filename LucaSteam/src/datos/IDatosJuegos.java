@@ -17,7 +17,6 @@ public interface IDatosJuegos {
 
 	public void altaJuego(Juego juego);
 	public void mostrarJuegos();
-	public void altaJuego(Juego juego);
 	public void listadoGeneroPlataforma(String nombreGeneroJuego);
 	public void listadoConsolaNintendo();
 	public void listadoEditores(String nombreEditor);
