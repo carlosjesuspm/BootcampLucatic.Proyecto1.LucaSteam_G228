@@ -1,20 +1,18 @@
 package datos;
 
-import static org.junit.Assert.*;
-
+import java.util.ArrayList;
 import org.junit.Test;
+import model.Juego;
 
 public class importarDatos {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
-	public void testsuma() {
-		int i = 1+2;
-		assertEquals(i, 3);
+	public void deberiaGuardarDatosEnArrayList() {
+		
+		ArrayList<Juego> lista = new ArrayList<Juego>();
+		
+		
+		
 	}
 
 }
