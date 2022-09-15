@@ -45,6 +45,18 @@ public class DatosJuegos implements IDatosJuegos {
 			logger.error("Error al abrir el archivo " + e.getMessage());
 		}
 	}
+	
+	/**
+	 * M
+	 * @param rutaArchivo
+	 */
+	public void importarDatos(String rutaArchivo) {
+		try {
+			listaJuegos = Fichero.leerCsv(rutaArchivo, true);
+		} catch (IOException e) {
+			logger.error("Error al abrir el archivo " + e.getMessage());
+		}
+	}
 
 	/**
 	 * Metodo para mostrar una lista de todos los juegos
@@ -112,7 +124,7 @@ public class DatosJuegos implements IDatosJuegos {
 		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
 				.filter(juego -> juego.getEditor().equalsIgnoreCase("Nintendo")).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
-	};
+	}
 
 	/**
 	 * Metodo para mostrar un listado filtrado de los editores
@@ -124,7 +136,7 @@ public class DatosJuegos implements IDatosJuegos {
 		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
 				.filter(juego -> juego.getEditor().equalsIgnoreCase(nombreEditor)).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
-	};
+	}
 
 	public void filtrarSigloXX() {
 	};
