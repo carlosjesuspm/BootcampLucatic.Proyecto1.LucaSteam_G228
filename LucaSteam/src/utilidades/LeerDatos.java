@@ -31,7 +31,7 @@ public class LeerDatos {
 
 	public static String recogerString(String mensaje) throws InputMismatchException{
 			System.out.println(mensaje);
-			return recogerString(mensaje);
+			return recogerString();
 	}
 
 	
@@ -51,7 +51,7 @@ public class LeerDatos {
 
 	public static int recogerInt(String mensaje)throws InputMismatchException {
 		System.out.println(mensaje);
-		return recogerInt(mensaje);
+		return recogerInt();
 	}
 
 
@@ -71,7 +71,7 @@ public class LeerDatos {
 
 	public static float recogerFloat(String mensaje) throws InputMismatchException{
 		System.out.println(mensaje);
-		return recogerFloat(mensaje);
+		return recogerFloat();
 	}
 
 }
