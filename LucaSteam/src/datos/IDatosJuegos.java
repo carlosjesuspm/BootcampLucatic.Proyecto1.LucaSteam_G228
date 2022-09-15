@@ -15,4 +15,6 @@ public interface IDatosJuegos {
 	public void importarDatos();
 
 	public void altaJuego(Juego juego);
+	public void mostrarJuegos();
+	
 }

@@ -10,7 +10,9 @@ package servicios;
 
 public interface IServiciosJuegos {
 	
-	public abstract void importarDatos();
+	public void importarDatos();
+	public void mostrarJuegos();
+	
 	
 	
 		
