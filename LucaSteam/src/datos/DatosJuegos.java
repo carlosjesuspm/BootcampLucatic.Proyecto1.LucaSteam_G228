@@ -3,10 +3,8 @@ package datos;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import lombok.Data;
 import model.Genero;
 import model.Juego;
@@ -44,9 +42,6 @@ public class DatosJuegos implements IDatosJuegos {
 			logger.error("Error al abrir el archivo " + e.getMessage());
 		}
 	}
-	
-	
-	
 
 	/**
 	 * Metodo para mostrar una lista de todos los juegos
@@ -92,6 +87,7 @@ public class DatosJuegos implements IDatosJuegos {
 
 	/**
 	 * Metodo para mostrar un listado filtrado por el {@link Genero} introducido
+	 * 
 	 * @param nombreGeneroJuego Genero por el que se quiere filtrar
 	 * @author Grupo2
 	 * @version 1.0
@@ -106,6 +102,7 @@ public class DatosJuegos implements IDatosJuegos {
 
 	/**
 	 * Metodo para mostrar un listado filtrado de la consola Nintendo
+	 * 
 	 * @author Grupo2
 	 * @version 1.0
 	 * @date 14/09
@@ -114,10 +111,11 @@ public class DatosJuegos implements IDatosJuegos {
 		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
 				.filter(juego -> juego.getEditor().equalsIgnoreCase("Nintendo")).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
-	};
+	}
 
 	/**
 	 * Metodo para mostrar un listado filtrado de los editores
+	 * 
 	 * @author Grupo2
 	 * @version 1.0
 	 * @date 14/09
@@ -126,18 +124,6 @@ public class DatosJuegos implements IDatosJuegos {
 		listaFiltrada = (ArrayList<Juego>) listaJuegos.stream()
 				.filter(juego -> juego.getEditor().equalsIgnoreCase(nombreEditor)).collect(Collectors.toList());
 		listaFiltrada.forEach(System.out::println);
-	};
-
-	public void filtrarSigloXX() {
-	};
-
-	public void modificarJuego(int rango) {
-	};
-
-	public void eliminarJuego(int rango) {
-	};
-
-	public void filtrarAnnoPar() {
-	};
+	}
 
 }

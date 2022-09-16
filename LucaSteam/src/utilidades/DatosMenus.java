@@ -2,17 +2,17 @@ package utilidades;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import gui.Menu;
 import model.Genero;
 import model.Plataforma;
 
 public class DatosMenus {
-	
+
 	private static final Logger logger = LogManager.getLogger("DatosMenus");
-	
+
 	/**
 	 * Metodo para pedir un genero por teclado
+	 * 
 	 * @return {@link Genero} segun el dato introducido
 	 */
 	public static Genero pedirGenero() {
@@ -30,9 +30,10 @@ public class DatosMenus {
 		} while (g == null);
 		return g;
 	}
-	
+
 	/**
 	 * Metodo para pedir una plataforma por teclado
+	 * 
 	 * @return {@link Plataforma} segun el dato introducido
 	 */
 	public static Plataforma pedirPlataforma() {

@@ -7,13 +7,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import model.FactoriaJuegos;
 import model.Juego;
-
 
 /**
  * Clase para tratar fichero CSV.
@@ -23,17 +20,18 @@ import model.Juego;
  */
 
 public class Fichero {
+	
 	private static final Logger logger = LogManager.getLogger("Fichero");
 
 	/**
 	 * Descripción del método: Metodo que convierte Csv en ArrayList.
 	 *
-	 * @param ruta La ruta del archivo csv que se quiere leer
+	 * @param ruta          La ruta del archivo csv que se quiere leer
 	 * @param tieneCabecera {@code true} tiene cabecera, de otra manera no tiene
 	 * @return ArrayList<Juego> que contiene los juegos introducidos
 	 * @author Grupo 2
 	 * @version 2.0
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	public static ArrayList<Juego> leerCsv(String ruta, boolean tieneCabecera) throws IOException {
 		ArrayList<Juego> juegos = new ArrayList<>();
@@ -45,8 +43,9 @@ public class Fichero {
 			for (String string : lineas) {
 				try {
 					String[] palabras = string.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
-					juegos.add(FactoriaJuegos.crearJuego(palabras[0], palabras[1], palabras[2], palabras[3], palabras[4],
-							palabras[5], palabras[6], palabras[7], palabras[8], palabras[9], palabras[10]));
+					juegos.add(
+							FactoriaJuegos.crearJuego(palabras[0], palabras[1], palabras[2], palabras[3], palabras[4],
+									palabras[5], palabras[6], palabras[7], palabras[8], palabras[9], palabras[10]));
 				} catch (NumberFormatException e) {
 					logger.warn(e.getMessage() + " en " + string);
 				} catch (IllegalArgumentException e) {
@@ -70,13 +69,12 @@ public class Fichero {
 	 */
 	public static void escribirCsv(Juego juego, String ruta_fichero) {
 
-		try (FileWriter file = new FileWriter(ruta_fichero, true);
-			BufferedWriter writer = new BufferedWriter(file);)
-		{
+		try (FileWriter file = new FileWriter(ruta_fichero, true); BufferedWriter writer = new BufferedWriter(file);) {
 
-			writer.write(juego.getRango()+","+juego.getNombre()+","+juego.getPlataforma().getPlataforma()+","+juego.getYear()+","+
-					juego.getGenero()+","+juego.getEditor()+","+juego.getNaVentas()+","+juego.getEuVentas()+","+juego.getJpVentas()+","+
-					juego.getOtherVentas()+","+juego.getGlobalVentas()+"\n");
+			writer.write(juego.getRango() + "," + juego.getNombre() + "," + juego.getPlataforma().getPlataforma() + ","
+					+ juego.getYear() + "," + juego.getGenero() + "," + juego.getEditor() + "," + juego.getNaVentas()
+					+ "," + juego.getEuVentas() + "," + juego.getJpVentas() + "," + juego.getOtherVentas() + ","
+					+ juego.getGlobalVentas() + "\n");
 
 		} catch (IOException e) {
 			// TODO: handle exception
@@ -102,16 +100,3 @@ public class Fichero {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
